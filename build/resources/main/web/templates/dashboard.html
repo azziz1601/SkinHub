@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinHub Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+
+    <nav class="navbar">
+        <div class="nav-brand">SkinHub</div>
+        <a href="/login" class="btn-logout">Logout</a>
+    </nav>
+
+    <main class="container">
+        
+        <aside class="active-skin-section">
+            <div class="skin-preview-large">
+                <img src="" alt="Current Skin" id="current-skin-img">
+            </div>
+            <div>
+                <h3 id="active-skin-name">Loading...</h3>
+                <div class="active-status">● Active</div>
+            </div>
+        </aside>
+
+        <div class="content-area">
+            
+            <div class="actions-row">
+                <div class="action-card">
+                    <h3>Upload File</h3>
+                    <form id="upload-form">
+                        <input type="file" id="skin-file" name="file" accept="image/png" style="display:none">
+                        <button type="button" class="btn-secondary" onclick="document.getElementById('skin-file').click()" id="btn-browse">Browse .png</button>
+                        <div id="file-name" style="font-size: 0.8rem; color: #888; margin: 10px 0;">No file selected</div>
+                        <button type="submit" class="btn-primary">Upload Skin</button>
+                    </form>
+                </div>
+
+                <div class="action-card">
+                    <h3>Fetch User</h3>
+                    <form id="fetch-form">
+                        <input type="text" id="fetch-username" name="username" placeholder="Minecraft Username" required>
+                        <button type="submit" class="btn-secondary">Fetch & Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <section>
+                <div class="wardrobe-header">
+                    <h3>My Wardrobe</h3>
+                    <span style="font-size: 0.9rem; color: #aaa;">
+                        <span id="skin-count">0</span>/{{max_skins}}
+                    </span>
+                </div>
+                <div class="wardrobe-grid" id="wardrobe-grid">
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script>
+        window.wardrobeData = {{wardrobe_json}};
+        window.activeSkin = {{active_skin_json}};
+    </script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

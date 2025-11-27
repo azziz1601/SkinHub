@@ -1,0 +1,22 @@
+name: SkinHub
+version: 1.0.0
+main: zeroends.skinhub.SkinHub
+api-version: '1.21'
+authors: [zeroends]
+description: Web-based skin manager for offline servers
+website: https://github.com/zeroends/SkinHub
+
+commands:
+  skinhub:
+    description: Main command for SkinHub
+    usage: /skinhub <link|reload>
+    aliases: [skin, skins]
+    permission: skinhub.use
+
+permissions:
+  skinhub.use:
+    description: Allows usage of SkinHub commands
+    default: true
+  skinhub.admin:
+    description: Allows reloading configuration
+    default: op

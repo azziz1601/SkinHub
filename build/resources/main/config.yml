@@ -1,0 +1,30 @@
+web-server:
+  port: 25566
+  bind-address: "0.0.0.0"
+  public-url: "http://your-server-ip:25566"
+  ssl:
+    enabled: false
+    keystore-path: "plugins/SkinHub/keystore.jks"
+    keystore-password: "password"
+
+database:
+  file: "skinhub.db"
+
+settings:
+  token-expiry-seconds: 180
+  session-expiry-days: 7
+  max-wardrobe-slots: 10
+  allowed-mime-types:
+    - "image/png"
+  max-upload-size-bytes: 20480
+
+messages:
+  prefix: "<gradient:#3494E6:#EC6EAD>[SkinHub] </gradient>"
+  no-permission: "<red>You do not have permission to use this command."
+  only-players: "<red>Only players can use this command."
+  link-generated: "<gray>Click here to manage your skins: <click:open_url:'%url%'><hover:show_text:'<green>Click to open SkinHub'><aqua><u>%url%</u></aqua></hover></click> <newline><gray>Token: <yellow>%token%</yellow> (Valid for %time%s)"
+  token-expired: "<red>Your link token has expired. Please generate a new one."
+  skin-updated: "<green>Your skin has been updated successfully!"
+  wardrobe-full: "<red>Your skin collection is full (Max %max%). Delete a skin to save a new one."
+  upload-failed: "<red>Failed to upload skin. Please try again."
+  reload-success: "<green>Configuration reloaded."

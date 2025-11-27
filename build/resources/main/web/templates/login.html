@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinHub Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <h1>SkinHub</h1>
+            <p>Secure Skin Management</p>
+        </div>
+        
+        <div class="error-message" style="display: {{error_display}};">
+            Invalid or expired token. Please generate a new one in-game using <code>/skinhub link</code>
+        </div>
+
+        <form action="/auth/verify" method="POST" class="login-form" onsubmit="disableButton()">
+            <div class="form-group">
+                <label for="token">Access Token</label>
+                <input type="text" id="token" name="token" value="{{token}}" placeholder="Enter 6-digit token" maxlength="6" required autocomplete="off">
+            </div>
+            <button type="submit" id="btn-submit" class="btn-primary">Authenticate</button>
+        </form>
+
+        <div class="login-footer">
+            <p>Don't have a token? Join the server and type <span>/skinhub link</span></p>
+        </div>
+    </div>
+
+    <script>
+        function disableButton() {
+            const btn = document.getElementById('btn-submit');
+            btn.style.opacity = '0.7';
+            btn.style.cursor = 'wait';
+            btn.innerText = 'Verifying...';
+            // Delay sedikit sebelum disable agar form terkirim dulu
+            setTimeout(() => { btn.disabled = true; }, 50);
+        }
+    </script>
+</body>
+</html>
