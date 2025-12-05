@@ -88,13 +88,3 @@ security:
   * **Java:** Java 21 or higher.
   * **Server Software:** Paper, Purpur, or Folia (1.21.x+).
   * **Browser:** Works on all modern browsers (Chrome, Firefox, Safari, Edge) and Mobile devices.
-
------
-
-## 🤝 Support & Source
-
-Found a bug? Have a suggestion?
-
-  * [**Issue Tracker**](https://www.google.com/search?q=LINK_REPOSITORY_GITHUB_ANDA)
-  * [**Source Code**](https://www.google.com/search?q=LINK_REPOSITORY_GITHUB_ANDA)
-  * [**Discord Support**](https://www.google.com/search?q=LINK_DISCORD_JIKA_ADA)
