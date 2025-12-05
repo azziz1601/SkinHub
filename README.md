@@ -26,8 +26,6 @@ Players simply generate a secure 6-digit token in-game, login to the web interfa
 
 ## 📸 Screenshots
 
-*(Di sini Anda wajib mengupload screenshot tampilan web plugin Anda)*
-
 | Login Page | Skin Manager & 3D Preview |
 | :---: | :---: |
 |  |  |
