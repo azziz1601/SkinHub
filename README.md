@@ -24,14 +24,6 @@ Players simply generate a secure 6-digit token in-game, login to the web interfa
 
 -----
 
-## 📸 Screenshots
-
-| Login Page | Skin Manager & 3D Preview |
-| :---: | :---: |
-|  |  |
-
------
-
 ## 🎮 How It Works (User Guide)
 
 1.  **Get the Token:** Type `/skinhub link` in-game. You will receive a secret 6-digit code (e.g., `829103`).
